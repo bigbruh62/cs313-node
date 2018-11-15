@@ -2,6 +2,7 @@ const cool = require('cool-ascii-faces')
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+const url = require('url')
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -62,7 +63,7 @@ express()
             price = "Expensive";
         }
   	}
-  	else if (type == "flats")
+  	else if (type == "large")
   	{
   		if (weight < 1)
         {
@@ -121,7 +122,7 @@ express()
             price = "Expensive";
         }
   	}
-  	else if (type == "parcels")
+  	else if (type == "parcel")
     {
         if (weight < 4)
         {
